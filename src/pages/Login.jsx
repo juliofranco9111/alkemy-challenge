@@ -3,7 +3,7 @@ import { Input } from '../components/Input';
 import { useAuth } from '../hooks/useAuth';
 import { useForm } from '../hooks/useForm';
 
-export const Login = () => {
+export default function Login (){
   const [values, handleInputChange] = useForm({
     email: '',
     password: '',
@@ -19,12 +19,11 @@ export const Login = () => {
   };
 
   return (
-    <div className='login'>
+    <div className='login custom-container'>
       <form className='form' onSubmit={handleSubmit}>
         <div className='banner'>
           <h1>Heroes</h1>
-
-          <p className='text-muted'>Alkemy challenge</p>
+          <p>Alkemy challenge</p>
         </div>
 
         <div className='form-container'>
