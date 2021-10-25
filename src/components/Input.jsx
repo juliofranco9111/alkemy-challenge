@@ -9,9 +9,9 @@ export const Input = ({
   onChange = () => {},
 }) => {
   return (
-    <>
+    <div className="form-input">
       {label && (
-        <label htmlFor={name} className='form-label'>
+        <label htmlFor={name}>
           {label}
         </label>
       )}
@@ -24,6 +24,6 @@ export const Input = ({
         onChange={onChange}
         placeholder={placeholder}
       />
-    </>
+    </div>
   );
 };
