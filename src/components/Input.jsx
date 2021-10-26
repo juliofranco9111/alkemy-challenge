@@ -1,4 +1,6 @@
 import React from 'react';
+import { Mention } from 'akar-icons';
+import { useIcon } from '../hooks/useIcon';
 
 export const Input = ({
   type = 'text',
@@ -9,21 +11,19 @@ export const Input = ({
   onChange = () => {},
 }) => {
   return (
-    <div className="form-input">
-      {label && (
-        <label htmlFor={name}>
-          {label}
-        </label>
-      )}
+    <div className='form-input'>
+      {label && <label htmlFor={name}>{label}</label>}
       <input
         type={type}
         value={value}
         name={name}
-        autoComplete="off"
-        className="form-control"
+        autoComplete='off'
+        className='form-control'
         onChange={onChange}
         placeholder={placeholder}
       />
+
+      {useIcon(name)}
     </div>
   );
 };

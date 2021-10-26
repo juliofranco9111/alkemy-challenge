@@ -1,0 +1,81 @@
+.card-hero {
+  align-items: center;
+  border: 3px solid;
+  display: flex;
+  margin: 0px auto;
+  background-color: red;
+  width: 90%;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  background-color: transparent;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-family: 'Roboto Mono';
+  box-shadow: 0px 0px 20px 10px rgba(99, 96, 96, 0.2);
+  overflow: hidden;
+  gap: 20px;
+
+
+
+  .card-image {
+      position: relative;
+      width: 100%;
+    img {
+        height: auto;object-fit: cover;
+        width: 100%;
+        left: 0px;
+        position: absolute;
+        z-index: -2;
+        opacity: 1;
+        filter: brightness(0.5);
+    }
+  }
+
+  h1 {
+    letter-spacing: 2px;
+    font-size: 1.5em;
+    text-align: right;
+    font-family: 'Permanent Marker';
+    top: 0;
+    background: $light;
+    padding: 5px;
+
+  }
+
+  h2 {
+    font-size: 1.2em;
+    background: $dark;
+    color: $light;
+  }
+
+  h4 {
+    font-weight: 400;
+    background: $light;
+    padding: 3px;
+    border: 1px solid $dark;
+
+  }
+
+  .card-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    width: 90%;
+    font-size: 0.8em;
+
+    .card-stat {
+      font-family: 'Roboto Mono', 'Helvetica Neue';
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+  }
+
+  .hero-buttons {
+    display: grid;
+    width: 90%;
+    margin-bottom: 20px;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}

@@ -17,6 +17,7 @@ export const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
   };
 
   return (
@@ -40,6 +41,7 @@ export const Login = () => {
           name='password'
           onChange={handleInputChange}
           className='form-control'
+          icon
         />
 
         <button type='submit' className='login-button'>

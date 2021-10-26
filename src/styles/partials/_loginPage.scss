@@ -30,9 +30,11 @@
   .form-input {
     flex-direction: column;
     margin-bottom: 10px;
+    position: relative;
     label {
-      font-family: 'Roboto Mono';
-      font-weight: 600;
+      font-family: 'Roboto Mono', monospace;
+      font-weight: 400;
+      font-size: 1.2em
     }
     input {
       margin-top: 5px;
@@ -40,13 +42,20 @@
       height: 50px;
       font-family: 'Roboto Mono';
       border: 3px solid $dark;
-      padding: 10px 20px;
+      padding: 10px 40px 10px 15px;
       font-size: 1.3em;
       outline: none;
+      transition: all 100ms;
 
       &:focus {
         outline: 3px solid lighten($dark, 30%);
       }
+    }
+    svg{
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      color: $dark;
     }
   }
 
@@ -61,5 +70,14 @@
     font-weight: 500;
     outline: none;
     color: $light;
+    transition: all 0.2s;
+    cursor: pointer;
+    &:hover{
+      background-color: darken( $dark, 15% );
+    }
+
+    &:active{
+      background-color: darken( $dark, 10% );
+    }
   }
 }
